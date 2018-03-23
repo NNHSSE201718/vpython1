@@ -16,3 +16,4 @@ def graph_simpletrig (self, a, p, b, Gcolor):
 
 #test
 graph_simpletrig(1,1,0,color.blue)
+
