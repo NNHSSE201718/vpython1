@@ -1,5 +1,4 @@
-from visual import *
-from visual.graph import *
+from vpython import *
 
 f1 = gcurve(color=color.blue)
 
