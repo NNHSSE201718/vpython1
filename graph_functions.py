@@ -1,19 +1,23 @@
-from visual import *
-from visual.graph import *
+from vpython import *
+import math
 
 # want to graph sine or cosine?
 # @param co, 1 is cosine, 0 is sine
 # @param a amplitude
-# @param p period
+# @param p period is 2pi/p
 # @param b 2 pi/(phase shift)
-# @param color the color of the graph
-# will graph a*sin(p*(x + b)) 
-def graph_simpletrig (self, a, p, b, Gcolor):
+# @param Gcolor the color of the graph
+# will graph a*sin(p*(x + b))    (or cos)
+def graph_simpletrig (co, a, p, b, Gcolor):
     f1 = gcurve(color=Gcolor)
-    for x in arange(0, 8.1, 0.01):
-        f1.plot(pos=(x, a*sin(p*(x+b))))
+    if co:
+        for x in arange(0, 2*2*math.pi/p, 0.01):
+            f1.plot(pos=(x, a*cos(p*(x+b))))
+    else:
+        for x in arange(0, 2*2*math.pi/p, 0.01):
+            f1.plot(pos=(x, a*sin(p*(x+b))))
 
 
 #test
-graph_simpletrig(1,1,0,color.blue)
+graph_simpletrig(False, 1,1,0,color.blue)
 
