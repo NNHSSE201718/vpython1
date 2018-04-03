@@ -1,8 +1,10 @@
 from vpython import *
+from graph_functions import graph_simpletrig, graph_sumtrig
 
-f1 = gcurve(color=color.blue)
+#test
+#graph_simpletrig(0, 1,1,0,color.blue)
 
-f2 = gcurve(color=color.red)
-for x in arange(0,8.05,0.01):
-    f1.plot(pos=(x,sin(x)))
-    f2.plot(pos=(x,sin(x+180)))
+#graph_simpletrig(1, 1, 1, 0, color.red)
+
+
+graph_sumtrig([[0,1,1,0],[0,2,1,0]],color.blue)
