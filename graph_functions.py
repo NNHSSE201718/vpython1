@@ -1,4 +1,5 @@
-from vpython import *
+from visual import *
+from visual.graph import *
 import math
 
 # want to graph sine or cosine?
