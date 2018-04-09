@@ -101,4 +101,3 @@ while True:
     rate(100)
     if running:
         currentobject.rotate(angle=speed*1e-4, axis=vector(0,1,0))
-
