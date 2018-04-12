@@ -1,5 +1,5 @@
-from visual import *
-from visual.graph import *
+from vpython import *
+#from vpython.graph import *
 import math
 
 # want to graph sine or cosine?
@@ -24,7 +24,7 @@ def graph_simpletrig (co, a, p, b, Gcolor):
 # @param Gcolor the color of the total graph
 def graph_sumtrig (functions, Gcolor):
     f2 = gcurve(color=Gcolor)
-    
+
     for i in range(len(functions)):
         if len(functions[i]) != 4:
             print("Function number" , (i+1) , "was inputted incorrectly")
@@ -39,10 +39,3 @@ def graph_sumtrig (functions, Gcolor):
                 total = total + functions[i][1]*sin(functions[i][2]*(x+functions[i][3]))
 
         f2.plot(pos=(x,total))
-
-            
-            
-            
-
-
-
