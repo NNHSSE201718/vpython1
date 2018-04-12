@@ -1,4 +1,5 @@
 from vpython import *
+print(vpython.__version__)
 # This version uses VPython widgets: button, radio button, checkbox, slider, menu
 # See ButtonsSlidersMenus1 for a version that uses Jupyter notebook widgets: button, slider, menu
 scene.width = 350
@@ -13,7 +14,7 @@ def Run(b):
     running = not running
     if running: b.text = "Pause"
     else: b.text = "Run"
-    
+
 button(text="Pause", pos=scene.title_anchor, bind=Run)
 
 box_object = box(visible=True)
@@ -42,7 +43,7 @@ def Color(c):
         cbutton.background = color.cyan
         r1.checked = True
         r2.checked = False
-        
+
 cbutton = button(text='<b>Red</b>', textcolor=color.red, background=color.cyan, pos=scene.title_anchor, bind=Color)
 
 scene.caption = "Vary the rotation speed:\n"
@@ -51,7 +52,7 @@ def setspeed(s):
     global speed
     speed = s.value
     wt.text = '{:1.0f}'.format(s.value)
-    
+
 sl = slider(min=20, max=500, value=250, length=280, bind=setspeed, right=15)
 
 wt = wtext(text='{:1.0f}'.format(sl.value))
@@ -68,13 +69,13 @@ def M(m):
     currentaxis = currentobject.axis
     currentobject.visible = False
     val = m.selected
-    if val == "box": 
+    if val == "box":
         currentobject = box_object
-    elif val == "cone": 
+    elif val == "cone":
         currentobject = cone_object
-    elif val == "pyramid": 
+    elif val == "pyramid":
         currentobject = pyramid_object
-    elif val == "cylinder": 
+    elif val == "cylinder":
         currentobject = cylinder_object
     currentobject.color = col
     currentobject.axis = currentaxis
