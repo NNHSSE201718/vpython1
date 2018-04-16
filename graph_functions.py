@@ -22,15 +22,15 @@ def graph_simpletrig (co, a, p, b, Gcolor):
 #       each function is a list, with paramaters for
 #       graph_simpletrig above, without color
 # @param Gcolor the color of the total graph
-def graph_sumtrig (functions, Gcolor):
-    f2 = gcurve(color=Gcolor)
-
+def graph_sumtrig (f2, functions, Gcolor, gd,c):
+    c.clear()
+    f2 = gcurve(color=Gcolor,graph=gd)
     for i in range(len(functions)):
         if len(functions[i]) != 4:
             print("Function number" , (i+1) , "was inputted incorrectly")
             sys.exit()
 
-    for x in arange(0, 4*math.pi, 0.01):
+    for x in arange(-4*math.pi, 4*math.pi, 0.01):
         total = 0
         for i in range(len(functions)):
             if functions[i][0]==1:
@@ -39,3 +39,5 @@ def graph_sumtrig (functions, Gcolor):
                 total = total + functions[i][1]*sin(functions[i][2]*(x+functions[i][3]))
 
         f2.plot(pos=(x,total))
+        c.append(pos = vector(x,total,0))
+    return(f2)
