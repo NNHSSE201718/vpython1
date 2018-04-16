@@ -30,7 +30,7 @@ def graph_sumtrig (f2, functions, Gcolor, gd,c):
             print("Function number" , (i+1) , "was inputted incorrectly")
             sys.exit()
 
-    for x in arange(-4*math.pi, 4*math.pi, 0.01):
+    for x in arange(0, 6*math.pi, 0.01):
         total = 0
         for i in range(len(functions)):
             if functions[i][0]==1:
@@ -39,5 +39,5 @@ def graph_sumtrig (f2, functions, Gcolor, gd,c):
                 total = total + functions[i][1]*sin(functions[i][2]*(x+functions[i][3]))
 
         f2.plot(pos=(x,total))
-        c.append(pos = vector(x,total,0))
+        c.append(pos = vector(x-5,total,0))
     return(f2)
