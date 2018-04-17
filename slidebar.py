@@ -1,7 +1,7 @@
 from vpython import *
 from graph_functions import graph_simpletrig, graph_sumtrig
 print(vpython.__version__)
-
+sphere()
 amt_of_bars = 5
 all_graphs = []
 for i in range(amt_of_bars):
