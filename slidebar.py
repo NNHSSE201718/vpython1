@@ -27,19 +27,23 @@ def createGraph():
           foreground=color.black, background=color.white,
           xmin=0, xmax=6*math.pi, ymin=-5, ymax=5)
     curve1 = graph_sumtrig(curve1,all_graphs,color.blue,gd,visCurve)
+    displayFunctions()
 
 def displayFunctions():
     global t
     global all_graphs
     setText = ''
     for i in range(len(all_graphs)):
+        if all_graphs[i][1]==0:
+            continue
         setText+=str(all_graphs[i][1])
         if all_graphs[i][0]:
             setText+="cos("
         else:
             setText+="sin("
-        setText+=str(all_graphs[i][2])+"θ)+"+str(all_graphs[i][3])+"  "
-    t.text = (setText )
+        setText+=str(round(all_graphs[i][2],3))+"θ)+"+str(all_graphs[i][3])+"  "
+    t.text = "\t" + setText
+
 
 #sphere()
 amt_of_bars = 5
@@ -53,7 +57,8 @@ curve1 = gcurve(color =color.blue,graph=gd )
 allBars = []
 allTexts = []
 visCurve = curve()
-t = wtext(text = '')
+df = wtext(text = "Display Function:")
+t = wtext(text = 'Function: ', align = 'center' )
 
 #Create all the lists which contain the graphs
 for i in range(amt_of_bars):
