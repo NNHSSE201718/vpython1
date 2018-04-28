@@ -9,8 +9,8 @@ import math
 # @param b 2 pi/(phase shift)
 # @param Gcolor the color of the graph
 # will graph a*sin(p*(x + b))    (or cos)
-def graph_simpletrig (co, a, p, b, Gcolor):
-    f1 = gcurve(color=Gcolor)
+def graph_simpletrig (co, a, p, b, Gcolor,gd):
+    f1 = gcurve(color=Gcolor,graph=gd)
     if co==1:
         for x in arange(0, 2*2*math.pi, 0.01):
             f1.plot(pos=(x, a*cos(p*(x+b))))
