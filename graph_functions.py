@@ -22,8 +22,8 @@ def graph_simpletrig (co, a, p, b, Gcolor,gd):
 #       each function is a list, with paramaters for
 #       graph_simpletrig above, without color
 # @param Gcolor the color of the total graph
-def graph_sumtrig (f2, functions, Gcolor, gd,c):
-    c.clear()
+def graph_sumtrig (f2, functions, Gcolor, gd):
+    #c.clear()
     f2 = gcurve(color=Gcolor,graph=gd)
     for i in range(len(functions)):
         if len(functions[i]) != 4:
@@ -39,5 +39,15 @@ def graph_sumtrig (f2, functions, Gcolor, gd,c):
                 total = total + functions[i][1]*sin(functions[i][2]*(x+functions[i][3]))
 
         f2.plot(pos=(x,total))
-        c.append(pos = vector(x-5,total,0))
+        #c.append(pos = vector(x-5,total,0))
     return(f2)
+def graph_3D_curve(functions,c,offset):
+    c.clear()
+    for x in arange(0, 6*math.pi, 0.01):
+        total = 0
+        for i in range(len(functions)):
+            if functions[i][0]==1:
+                total = total + functions[i][1]*cos(functions[i][2]*(x+offset+functions[i][3]))
+            else:
+                total = total + functions[i][1]*sin(functions[i][2]*(x+offset+functions[i][3]))
+        c.append(pos=vector(x-5,total,0))
