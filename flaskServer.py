@@ -6,6 +6,6 @@ password = 'nnhs3061'
 @app.route('/')
 def runVpython():
     exec(open("Full_Simulation_Python.py").read(),globals())
-    return
+    return("The Server Ran")
 if __name__ == "__main__":
     app.run()

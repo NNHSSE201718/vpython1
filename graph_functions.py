@@ -50,4 +50,4 @@ def graph_3D_curve(functions,c,offset):
                 total = total + functions[i][1]*cos(functions[i][2]*(x+offset+functions[i][3]))
             else:
                 total = total + functions[i][1]*sin(functions[i][2]*(x+offset+functions[i][3]))
-        c.append(pos=vector(x-5,total,0))
+        c.append(pos=vector(x-10,total,0))
