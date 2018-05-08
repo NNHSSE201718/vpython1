@@ -21,4 +21,5 @@ def synth(graphList, duration):
     wave = np.sin(2*np.pi*440*np.arange(10000*2)/10000)
     Audio(wave, rate=rate, autoplay=True)
     print(x)
+
 synth([[0,1,1,0]],5)
