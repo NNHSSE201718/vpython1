@@ -14,12 +14,11 @@ def synth(graphList, duration):
     
     t = np.linspace(
         0., duration, int(rate * duration))
-    print(t) 
+    
     x = 0
     for i in range(len(graphList)):
         x += graphList[i][1]*(np.sin(graphList[i][2] * 2. * np.pi * 440 * t))
-    wave = np.sin(2*np.pi*440*np.arange(10000*2)/10000)
-    Audio(wave, rate=rate, autoplay=True)
-    print(x)
+    # wave = np.sin(2*np.pi*440*np.arange(10000*2)/10000)
+    Audio(x, rate=rate, autoplay=True)
 
 synth([[0,1,1,0]],5)
