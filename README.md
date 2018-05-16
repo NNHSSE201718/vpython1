@@ -7,5 +7,7 @@ Platform Requirements: None
 To install the simulation, simply clone, configure, and run.
 
 <i> Cloning from Github: </i> You should be able to clone our project straight from Github.
+
 <i> Configuring the simulation: </i> Simply run the command <b> sudo sh install.sh </b> in the command terminal.
+
 <i> Running the simulation: </i> After running the script, everything you need will be automatically imported. You should be able to run the project simulation.
