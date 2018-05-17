@@ -2,12 +2,12 @@
 
 ## Purpose:
 
-The purpose of this project is to create a simulation of the Fourier Transform which utilizes both audio and visuals to represent the interference and decomposition of waves. The simulation uses VPython, iPython, and PyAudio. Users should be able to adjust component waves or select preset waveforms, then hear and see the effects on the composite wave. Also includes a moving wave graph and mathematical approximation. 
+The purpose of this project is to create a simulation of the Fourier Transform which utilizes both audio and visuals to represent the interference and decomposition of waves. The simulation uses VPython, PyAudio, and Flask. Users should be able to adjust component waves or select preset waveforms, then hear and see the effects on the composite wave. Also includes a moving wave graph and mathematical approximation. 
 
 
-## Install 
+## Install and Run
 
-Platform Requirements: None
+Platform Requirements: None, has been tested with Windows and Linux. 
 
 To install the simulation, simply clone, configure, and run.
 
@@ -27,7 +27,14 @@ After running the script, everything you need will be automatically imported. Yo
 
 To demo the server run the command: ```python3 flaskServer.py```
 
-# Developed by: 
+This will create a locally hosted server on port 5000, you should be able to open the simulation in any web browser at http://localhost:5000
+
+The simulation should look as pictured below:
+
+![Fourier Simulation](https://imgur.com/60I6rpb)
+
+
+## Developed by: 
 
 The 2018 NNHS Software Engineering VPython team.
 
