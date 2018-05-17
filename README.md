@@ -31,7 +31,7 @@ This will create a locally hosted server on port 5000, you should be able to ope
 
 The simulation should look as pictured below:
 
-![Fourier Simulation](https://imgur.com/60I6rpb)
+![Fourier Simulation](vpython1/SimulationExample.png)
 
 
 ## Developed by: 
