@@ -7,7 +7,7 @@ The purpose of this project is to create a simulation of the Fourier Transform w
 
 ## Install and Run
 
-Platform Requirements: None, has been tested with Windows and Linux. 
+Platform Requirements: None, has been tested with Windows and Linux. Not compatible with RasPi unless GL Drivers are enabled.
 
 To install the simulation, simply clone, configure, and run.
 
